@@ -24,7 +24,7 @@ For this to work you need to have Python-Fhem installed. The documentation can b
 
   1. In /opt/fhem create a file called fhem_wakeup.py or copy the file from here
   2. Configure the file to match your requirements (hostname, user, pw, location of alarm.txt, lights to control)
-  3. If you want to receive status updates via telegram, add the name of your bot
+  3. If you want to receive status updates via telegram, add the name of your bot. If you are not using a telegram bot, leave botname = "NAME"
   
   The shortcut will write the alarm time without changing the date. Therefore, the fhem_wakeup.py will add a day if the alarm   time is before the current time.
   
