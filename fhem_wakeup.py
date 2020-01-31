@@ -4,14 +4,14 @@ fh = fhem.Fhem('IP', port=8083, protocol='https', username="", password="")
 
 logging.basicConfig(level=logging.DEBUG)
 
-chatbot = "NAME"  # set telegram bot name to receive status messages
+botname = "NAME"  # set telegram bot name to receive status messages
 light = "NAME"  # set light(s) to turn on
 path_to_file = "PATH" # ex: /opt/fhem/alarm.txt
 
 
 def send_message(text):
-    if chatbot != "NAME":
-        fh.send_cmd(f"set {chatbot} message {text} (fhem_wakeup)")
+    if botname != "NAME":
+        fh.send_cmd(f"set {botname} message {text} (fhem_wakeup)")
 
 
 alarm_time_file = open(f'{path_to_file}', 'r')
