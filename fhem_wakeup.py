@@ -10,7 +10,8 @@ path_to_file = "PATH" # ex: /opt/fhem/alarm.txt
 
 
 def send_message(text):
-    fh.send_cmd(f"set {chatbot} message {text} (fhem_wakeup)")
+    if chatbot != "NAME":
+        fh.send_cmd(f"set {chatbot} message {text} (fhem_wakeup)")
 
 
 alarm_time_file = open(f'{path_to_file}', 'r')
