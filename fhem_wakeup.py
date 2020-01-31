@@ -1,6 +1,6 @@
 import sys, fhem, logging, time, datetime
 
-fh = fhem.Fhem('IP', port=8083, protocol='https', username="", password="")
+fh = fhem.Fhem('IP', port=8083, protocol='https', username="", password="") # change according to your fhem configuration
 
 logging.basicConfig(level=logging.DEBUG)
 
